@@ -6,8 +6,15 @@ import App from './App.vue'
 import axios from "axios";
 import VueAxios from "vue-axios";
 
+//-- mdicon
+import mdiVue from 'mdi-vue/v3'
+import * as mdijs from '@mdi/js'
+
 const app = createApp(App);
 app.use(VueAxios, axios);
+app.use(mdiVue, {
+  icons: mdijs
+});
 
 app.mount('#app');
 

@@ -1,6 +1,6 @@
 <template>
-  <div class="askai w-full bg-gray-100 p-2">
-    <div class="mb-4 w-full flex flex-col">
+  <div class="askai w-full bg-gray-100 p-4 rounded-md ">
+    <div class="mb-4 w-full flex flex-col text-[#408EC6]">
       <h1 class="text-3xl">
         Ask AI
       </h1>
@@ -13,7 +13,7 @@
     </div>
     <div class="mb-6 w-full flex flex-col">
       <button @click="getAdvice(input)"
-        class="text-white bg-[#1E2761] hover:bg-[#717DCB] focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 rounded disabled:opacity-50"
+        class="text-white bg-[#1E2761] hover:bg-[#717DCB] focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center rounded disabled:opacity-50"
         :disabled="loading">Submit</button>
     </div>
     <div class="mb-6 text-justify border-2 border-[#7A2048] p-2 bg-[#408EC6] rounded-lg">

@@ -31,8 +31,8 @@ const input = ref("");
 const loading = ref(false);
 
 function getAdvice(item) {
-  let apiKey = import.meta.env.VITE_OPEN_API_KEY
-  if (apiKey == "") {
+  let apiKey = import.meta.env.VITE_OPEN_API_KEY;
+  if (apiKey == "" || apiKey == undefined) {
     apiKey = "c13e90c5a9614632a4e32f01c03308ed"
   };
   let headers = {

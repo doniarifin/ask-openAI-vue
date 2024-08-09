@@ -32,7 +32,7 @@ const loading = ref(false);
 
 function getAdvice(item) {
   let headers = {
-    headers: { Authorization: `Bearer c13e90c5a9614632a4e32f01c03308ed` },
+    headers: { Authorization: `Bearer ${import.meta.env.VITE_OPEN_API_KEY}` },
   }
   let params = {
     model: "mistralai/Mistral-7B-Instruct-v0.2",

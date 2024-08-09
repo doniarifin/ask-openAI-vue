@@ -31,8 +31,12 @@ const input = ref("");
 const loading = ref(false);
 
 function getAdvice(item) {
+  let apiKey = import.meta.env.VITE_OPEN_API_KEY
+  if (apiKey == "") {
+    apiKey = "c13e90c5a9614632a4e32f01c03308ed"
+  };
   let headers = {
-    headers: { Authorization: `Bearer ${import.meta.env.VITE_OPEN_API_KEY}` },
+    headers: { Authorization: `Bearer ` + apiKey },
   }
   let params = {
     model: "mistralai/Mistral-7B-Instruct-v0.2",

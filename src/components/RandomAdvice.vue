@@ -3,7 +3,7 @@
     <label for="success" class="block mb-2 text-sm font-medium text-black-700"></label>
     <input type="text" v-model="value" id="word"
       class="text-center bg-gray-50 border-2 border-gray-500 text-black-900 dark:placeholder-green-500 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-green-500 focus:outline-none"
-      placeholder="Enter a word">
+      placeholder="Enter a word" @keyup.enter="getAdvice(value)">
   </div>
   <div class="mb-6 w-full flex flex-col">
     <button @click="getAdvice(value)"

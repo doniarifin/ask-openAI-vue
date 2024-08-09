@@ -1,10 +1,10 @@
 <script setup>
-import RandomAdvice from './components/RandomAdvice.vue'
+
 </script>
 
 <template>
-  <RandomAdvice />
-
+   <!-- Content -->
+  <router-view />
   <!-- Footer -->
   <footer class="footer">
     <div class="flex justify-end">

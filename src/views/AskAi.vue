@@ -38,12 +38,8 @@ const apiKey = ref("");
 const loading = ref(false);
 
 function getAdvice(item) {
-  let apiKey = import.meta.env.VITE_OPEN_API_KEY;
-  if (apiKey == "" || apiKey == undefined) {
-    apiKey = apiKey.value;
-  };
   let headers = {
-    headers: { Authorization: `Bearer ` + apiKey },
+    headers: { Authorization: `Bearer ` + apiKey.value },
   }
   let params = {
     model: "mistralai/Mistral-7B-Instruct-v0.2",

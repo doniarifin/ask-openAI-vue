@@ -11,6 +11,12 @@
         class="text-center bg-gray-50 border-2 border-gray-500 text-black-900 dark:placeholder-gray-500 dark:text-black text-sm rounded-lg block w-full p-2.5 focus:outline-none"
         placeholder="Ask me about" @keyup.enter="getAdvice(input)">
     </div>
+    <div class="mb-4 w-full flex flex-col">
+      <label for="success" class="block mb-2 text-sm font-medium text-black-700"></label>
+      <input type="text" v-model="apiKey" id="word"
+        class="text-center bg-gray-50 border-2 border-gray-500 text-black-900 dark:placeholder-gray-500 dark:text-black text-sm rounded-lg block w-full p-2.5 focus:outline-none"
+        placeholder="api Key">
+    </div>
     <div class="mb-6 w-full flex flex-col">
       <button @click="getAdvice(input)"
         class="text-white bg-[#1E2761] hover:bg-[#717DCB] focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center rounded disabled:opacity-50"
@@ -28,12 +34,13 @@ import axios from "axios";
 
 const result = ref("ask me something, dude..");
 const input = ref("");
+const apiKey = ref("");
 const loading = ref(false);
 
 function getAdvice(item) {
   let apiKey = import.meta.env.VITE_OPEN_API_KEY;
   if (apiKey == "" || apiKey == undefined) {
-    apiKey = "c13e90c5a9614632a4e32f01c03308ed"
+    apiKey = apiKey.value;
   };
   let headers = {
     headers: { Authorization: `Bearer ` + apiKey },
